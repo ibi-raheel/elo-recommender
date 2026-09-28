@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drexel-elo-recommender"
+version = "0.1.0"
+description = "Scrape, classify, and recommend experiential learning opportunities for Drexel students."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "beautifulsoup4>=4.12.3",
+  "fastapi>=0.115.0",
+  "httpx>=0.27.2",
+  "uvicorn>=0.30.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
